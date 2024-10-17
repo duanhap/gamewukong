@@ -37,7 +37,7 @@ class BossChim(PhysicsEntity):
             if not self.dead  :
                 if random.randint(0,100)<5 and len(self.game.enemies)<9 and self.hp<= 4 and self.mainBoss==True and self.soLanPhanthan>0:
                      self.game.enemies.append(BossChim(self.game, self.pos, (75, 100),False))
-                     self.game.enemies[len( self.game.enemies)-1].hp = 1
+                     self.game.enemies[len( self.game.enemies)-1].hp = 2
                      self.soLanPhanthan-=1
                 self.air_time+=1
                 if self.air_time>80:
@@ -207,7 +207,7 @@ class BossChim(PhysicsEntity):
                                       self.attacking = False 
                             
                 
-                elif random.randint(0,100)<50:
+                elif random.randint(0,100)<68:
                         self.walking = random.randint(30, 120)
 
 

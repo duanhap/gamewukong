@@ -116,7 +116,7 @@ class CungThu(PhysicsEntity):
                                 if self.animation.done:
                                     self.attacking = False
                         # cao thì đứng bắn
-                        if (dis[1]) > -100 and (dis[1]) <100 and abs(dis[0])<=3000 and random.randint(0,50)<10:
+                        if (dis[1]) > -100 and (dis[1]) <100 and abs(dis[0])<=3000 and abs(dis[0])>=10 and random.randint(0,50)<8.5:
                             
                                 # đang quay trái bắn trái nếu gặp
                                 if (self.flip and dis[0] < 0):
@@ -137,7 +137,7 @@ class CungThu(PhysicsEntity):
                                     if self.animation.done:
                                         self.attacking = False
                                 
-                elif random.randint(0,100)< 50:
+                elif random.randint(0,100)< 25:
                     self.walking = random.randint(30, 120)
                 
                 super().update(tilemap, movement=movement)

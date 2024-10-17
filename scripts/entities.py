@@ -258,6 +258,8 @@ class Player(PhysicsEntity):
         self.hp=10
         self.mana=50
         self.stamina = 50
+        self.binhhpmax=3
+        self.binhhp=3
         
       
         
